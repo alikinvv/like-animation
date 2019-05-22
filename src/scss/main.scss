@@ -1,0 +1,54 @@
+@charset 'UTF-8';
+@import 'mixins';
+
+html,
+body {
+  height: 100%;
+  background: #ffe2ea;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.like {
+	margin-top: -38px;
+	position: relative;
+
+	.heart {
+	  position: absolute;
+	  top: -10px;
+	  left: -11px;
+	  z-index: 1;
+	  user-select: none;
+    pointer-events: none;
+    display: none;
+}
+
+	.line {
+	  fill: none;
+	}
+
+	.second {
+	  fill: #c50000;
+	  transform: scale(0);
+	  transform-origin: 53% 61% 0px;
+	}
+
+	.main {
+	  stroke: #c50000;
+	  stroke-width: 5px;
+	  fill: #ffe2ea;
+	  transform-origin: 50% 50%;
+	}
+
+	svg {
+    transition: all .2s ease-in-out;
+    position: relative;
+    overflow: visible;
+    z-index: 2;
+    cursor: pointer;
+  }
+}
